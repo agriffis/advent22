@@ -11,10 +11,12 @@
   [input]
   (->> (parse input) (map sum) (apply max)))
 
+(comment
+  (part-a (read-input "day01")))
+
 (defn part-b
   [input]
   (->> (parse input) (map sum) (sort >) (take 3) sum))
 
 (comment
-  (let [input (read-input "day01")]
-    [(part-a input) (part-b input)]))
+  (part-b (read-input "day01")))

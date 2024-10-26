@@ -27,6 +27,9 @@
                 :CZ (+ scissors draw)}]
     (->> (parse input) (map scores) sum)))
 
+(comment
+  (part-a (read-input "day02")))
+
 (defn part-b
   [input]
   (let [scores {:AX (+ lose scissors)
@@ -41,5 +44,4 @@
     (->> (parse input) (map scores) sum)))
 
 (comment
-  (let [input (read-input "day02")]
-    [(part-a input) (part-b input)]))
+  (part-b (read-input "day02")))
