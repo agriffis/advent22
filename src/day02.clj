@@ -2,8 +2,6 @@
   (:require [clojure.string :as str]
             [lib :refer :all]))
 
-(def input (slurp "inputs/day02"))
-
 (defn parse
   [input]
   (let [squish (-> input str/trim (str/replace " " ""))]
@@ -42,6 +40,6 @@
                 :CZ (+ win rock)}]
     (->> (parse input) (map scores) sum)))
 
-(part-a input)
-
-(part-b input)
+(comment
+  (let [input (read-input "day02")]
+    [(part-a input) (part-b input)]))

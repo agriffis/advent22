@@ -1,1 +1,1 @@
-{:linters {:refer-all {:exclude [lib]}}}
+{:linters {:refer-all {:exclude [clojure.test lib]}}}
