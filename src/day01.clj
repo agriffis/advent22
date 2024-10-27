@@ -4,8 +4,7 @@
 
 (defn parse
   [input]
-  (let [inputs (str/split input #"\n\n")]
-    (map parse-longs inputs)))
+  (map parse-longs (split-paragraphs input)))
 
 (defn part-a
   [input]

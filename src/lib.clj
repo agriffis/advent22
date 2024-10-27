@@ -10,9 +10,17 @@
   [name]
   (slurp (io/resource (str "inputs/" name))))
 
+(defn split-paragraphs
+  [s]
+  (str/split (str/trim s) #"\n\n+"))
+
+(defn split-lines
+  [s]
+  (str/split-lines (str/trim s)))
+
 (defn parse-longs
   [s]
-  (->> (str/split (str/trim s) #"\s+") (map Long/parseLong)))
+  (->> (re-seq #"\d+" s) (map Long/parseLong)))
 
 (defn sum
   [xs]

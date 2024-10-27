@@ -1,1 +1,1 @@
-{:linters {:refer-all {:exclude [clojure.test lib]}}}
+{:linters {:refer-all {:exclude [clojure.test lib]} :unused-namespace {:exclude [".*"]}}}
