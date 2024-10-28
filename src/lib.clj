@@ -12,11 +12,15 @@
 
 (defn split-paragraphs
   [s]
-  (str/split (str/trim s) #"\n\n+"))
+  (str/split (str/trim-newline s) #"\n\n+"))
 
 (defn split-lines
   [s]
-  (str/split-lines (str/trim s)))
+  (str/split-lines s))
+
+(defn split-words
+  [s]
+  (re-seq #"\S+" s))
 
 (defn parse-longs
   [s]
