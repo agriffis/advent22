@@ -11,9 +11,9 @@ main() {
   fi
 
   mkdir -p resources/day$next
-  vim -O src/day$next.clj \
-    resources/day$next/example{example,input}{,.part-a.out} \
-    resources/day$next/example{example,input}.part-b.out
+  vim src/day$next.clj \
+    resources/day$next/{example,input}{,.part-a.out} \
+    resources/day$next/{example,input}.part-b.out
 }
 
 main "$@"; exit

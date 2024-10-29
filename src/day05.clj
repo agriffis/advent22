@@ -1,8 +1,7 @@
 (ns day05
+  (:use [uncomplicate.neanderthal core native])
   (:require [clojure.string :as str]
-            [lib :refer :all]
-            [uncomplicate.neanderthal.core :as m]
-            [uncomplicate.neanderthal.native :refer [native-long]]))
+            [lib :refer :all]))
 
 (defn ord
   [c]
@@ -20,11 +19,11 @@
         ;; and then to matrix
         w (count (first m))
         h (count m)
-        a (m/ge native-long w h m)]
+        a (ge native-long w h m)]
     (mapv #(->> (drop-while zero? %)
                 reverse
                 (mapv char))
-      (m/rows a))))
+      (rows a))))
 
 (defn parse-moves
   [input]

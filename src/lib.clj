@@ -2,17 +2,18 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
+(defn read-input
+  ([name] (read-input name "input"))
+  ([name suffix]
+   (str/trim-newline (slurp (io/resource (str name "/" suffix))))))
+
 (defn read-example
   [name]
-  (slurp (io/resource (str "examples/" name))))
-
-(defn read-input
-  [name]
-  (slurp (io/resource (str "inputs/" name))))
+  (read-input name "example"))
 
 (defn split-paragraphs
   [s]
-  (str/split (str/trim-newline s) #"\n\n+"))
+  (str/split s #"\n\n+"))
 
 (defn split-lines
   [s]
