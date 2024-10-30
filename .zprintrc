@@ -12,4 +12,5 @@
           "thrown?" :arg1-body}
  :map {:comma? false}
  :remove {:fn-force-nl #{:noarg1 :noarg1-body}}
- :style [:sort-require :respect-bl :respect-nl]}
+ :style [:sort-require :respect-bl :respect-nl]
+ :width 80}
